@@ -16,24 +16,8 @@ public class CharactersUtils {
                 found.add(character);
             }
         }
-        // => found
-
-        // version avec lambda
-        List<MobileElement> found2 = characters.stream().filter(c -> c.getX() == 10 && c.getY() == 2).collect(Collectors.toList());
-
-        return found2;
+        return found;
     }
 
-    public static int size(List<MobileElement> characters) {
-        int size = characters.size();
-        return size;
-    }
 
-    public static void add(List<MobileElement> characters, MobileElement mobileElement) {
-        characters.add(mobileElement);
-    }
-
-    public static void remove(List<MobileElement> characters, MobileElement mobileElement) {
-        characters.remove(mobileElement);
-    }
 }

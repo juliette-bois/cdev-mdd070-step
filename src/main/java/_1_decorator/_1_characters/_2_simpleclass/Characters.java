@@ -4,7 +4,6 @@ import _1_decorator._1_characters.MobileElement;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Characters {
 
@@ -18,12 +17,7 @@ public class Characters {
                 found.add(character);
             }
         }
-        // => found
-
-        // version avec lambda
-        List<MobileElement> found2 = characters.stream().filter(c -> c.getX() == 10 && c.getY() == 2).collect(Collectors.toList());
-
-        return found2;
+        return found;
     }
 
     public int size() {

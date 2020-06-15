@@ -1,5 +1,6 @@
 package _1_decorator._1_characters._3_extendsarraylist;
 
+import _1_decorator._1_characters.MobileElement;
 import _1_decorator._1_characters.SampleMobileElement;
 
 import java.util.List;
@@ -22,6 +23,9 @@ public class SampleUsage {
 
         // ou appeler une autre méthode qui utilise des list standards
         sampleMethodUsingList(characters);
+
+        List<MobileElement> l = new Characters();
+
 
         // Remarque 1 dans l'implémentation 2 de classe Characters on aurait pu rajouter une méthode getList() {return this.list;}
         // mais c'est une mauvaise idée, car on casse le principe d'encapsulation. ex si je veux modifier mon stockage pour utiliser un tableau, une map etc

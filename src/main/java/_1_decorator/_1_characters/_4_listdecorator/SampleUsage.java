@@ -1,5 +1,6 @@
 package _1_decorator._1_characters._4_listdecorator;
 
+import _1_decorator._1_characters.MobileElement;
 import _1_decorator._1_characters.SampleMobileElement;
 
 import java.util.ArrayList;

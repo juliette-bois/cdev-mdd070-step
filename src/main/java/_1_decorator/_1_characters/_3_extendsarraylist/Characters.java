@@ -17,12 +17,7 @@ public class Characters extends ArrayList<MobileElement> {
                 found.add(character);
             }
         }
-        // => found
-
-        // version avec lambda
-        List<MobileElement> found2 = this.stream().filter(c -> c.getX() == 10 && c.getY() == 2).collect(Collectors.toList());
-
-        return found2;
+        return found;
     }
 
     //les autres méthodes sont directement héritées
