@@ -1,5 +1,7 @@
 package _1_decorator._1_characters._1_list;
 
+import _1_decorator._1_characters.MobileElement;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
