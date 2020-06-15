@@ -1,4 +1,5 @@
-package _1_decorator._1_characters._2_windows._1_sanspattern;
+package _1_decorator._2_windows._1_sanspattern;
+
 
 import _1_decorator._2_windows.SimpleTextWindow;
 

@@ -1,4 +1,4 @@
-package _1_decorator._1_characters._2_windows;
+package _1_decorator._2_windows;
 
 public class SimpleTextWindow implements Window {
 

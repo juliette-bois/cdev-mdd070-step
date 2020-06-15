@@ -1,4 +1,4 @@
-package _1_decorator._1_characters._2_windows._1_sanspattern;
+package _1_decorator._2_windows._1_sanspattern;
 
 public class TopRightBorderWindow extends RightBorderWindow {
 
