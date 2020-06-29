@@ -6,6 +6,6 @@ import java.awt.*;
  * Interface pour charger une image.
  */
 public interface ImageReader {
-    Image getDecodedImage();
+    Image loadImage();
 }
  

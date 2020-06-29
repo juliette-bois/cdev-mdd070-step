@@ -1,4 +1,4 @@
-package _2_observator._2_exercice;
+package _3_observator._2_exercice;
 
 public class Application {
 

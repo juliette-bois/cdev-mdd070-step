@@ -19,7 +19,7 @@ public class JpegReader implements ImageReader {
         }
     }
 
-    public Image getDecodedImage() {
+    public Image loadImage() {
         // fausse implémentation, inutile de la coder pour l'exercice
         return null;
     }
