@@ -9,11 +9,12 @@ import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
 import java.util.zip.InflaterInputStream;
 
-/**
- * Classe réalisant de la compression.
- */
-public class Compressor {
+public class CompressionDecorator extends DataSourceDecorator {
   private int compLevel = 6;
+
+  public CompressionDecorator(DataSource source) {
+    super(source);
+  }
 
   public int getCompressionLevel() {
     return compLevel;
@@ -23,7 +24,17 @@ public class Compressor {
     compLevel = value;
   }
 
-  public String compress(String stringData) {
+  @Override
+  public void writeData(String data) {
+    super.writeData(compress(data));
+  }
+
+  @Override
+  public String readData() {
+    return decompress(super.readData());
+  }
+
+  private String compress(String stringData) {
     byte[] data = stringData.getBytes();
     try {
       ByteArrayOutputStream bout = new ByteArrayOutputStream(512);
@@ -37,7 +48,7 @@ public class Compressor {
     }
   }
 
-  public String decompress(String stringData) {
+  private String decompress(String stringData) {
     byte[] data = Base64.getDecoder().decode(stringData);
     try {
       InputStream in = new ByteArrayInputStream(data);
