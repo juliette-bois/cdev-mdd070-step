@@ -1,20 +1,20 @@
 package _3_observator._2_exercice;
 
-public class Application {
+public class Application implements Observer {
+  private Button button;
 
-    private Bouton bouton;
+  public void init() {
+    button = new Button();
+  }
 
-    /**
-     * Construction de l'application
-     */
-    public void init() {
-        bouton = new Bouton();
+  public void register() {
+    System.out.println("Enregistrement...");
+  }
+
+  @Override
+  public void update(String event, Observable observable) {
+    if (event.equals("click")) {
+      register();
     }
-
-    /**
-     * Enregistrement, méthode qui doit être déclenché lorsque l'on clic sur le bouton
-     */
-    public void enregistrer() {
-        System.out.println("Enregistrement...");
-    }
+  }
 }
